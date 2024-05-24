@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+.accordion-container{
+  margin-bottom: 105px;
+}
+
+
+.ac {
+  border-top: 1px solid #CACACA;
+  border-bottom: 1px solid transparent;
+  background: white;
+  box-sizing: border-box;
+  padding-right: 0;
+}
+
+
+.ac .ac-header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+}
+
+
+.faq-section__title{
+  margin: 50px 0px 37px 0px;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+
+.ac .ac-trigger {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat-Bold';
+  /* font-weight: 400; */
+  text-align: left;
+  font-size: calc((100vw - 1024px)/(1920 - 1024)*(24 - 20) + 20px);
+  line-height: 32px;
+  width: 100%;
+  background: white;
+  word-spacing: -0.5px;
+}
+
+
+.ac svg{
+  fill: #CACACA ;
+  width: 50px !important;
+  height: 50px !important;
+  overflow: visible;
+}
+
+
+.ac button{
+  display: flex;
+  padding-top: 29px;
+  padding-bottom: 30px;
+  gap:10px
+}
+
+
+.ac svg path{
+  fill: black;
+}
+
+
+.ac .ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+
+.ac .ac-panel .ac-text {
+  font-family: 'Montserrat-Regular';
+  /* font: 15px/24px "Arial", sans-serif; */
+  font-weight: 400;
+  font-size: 16px;
+  color: #111;
+  line-height: 32px;
+  padding: 8px;
+  margin: 0;
+}
+
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
+
+
+.ac:hover{
+  color: var(--orange-color);
+  border-top: 1px solid var(--orange-color);
+}
+
+
+.ac:hover+.ac{
+  border-top: 1px solid var(--orange-color);
+}
+
+
+.ac:last-child {
+  border-bottom: 1px solid #CACACA;
+}
+
+
+.ac:last-child:hover {
+  border-bottom: 1px solid var(--orange-color);
+}
+
+
+.ac button:hover{
+  color: var(--orange-color);
+}
+
+
+.ac:hover path{
+  fill:white;
+}
+
+
+.ac button:focus svg{ 
+  fill: #CACACA;
+  transition:  0.5s ;
+  transform: rotate(45deg);
+}
+
+
+.is-active button:hover svg,
+.ac button:hover svg{
+  fill:var(--orange-color);
+}
+
+
+.is-active button:focus svg{
+  transition:  0.5s ;
+  transform: rotate(45deg);
+}
+
+
